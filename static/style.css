@@ -1,0 +1,218 @@
+:root {
+  --brand: #E8C547;
+  --text: #f5f5f5;
+  --border: #E8C547;
+  --background: #161617;
+  --surface: #393a42;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: var(--brand);
+  font-size: 24px;
+}
+
+.card {
+  max-width: 700px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+thead th {
+  color: #E8C547;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+.student-form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.radio-row {
+  display: flex;
+  gap: 18px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #1d1d1c;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.alert {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #E8C547;
+  color: #997e1b;
+}
+
+.alert ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline {
+  display: inline;
+  margin: 0;
+}
+
+.danger {
+  padding: 4px 10px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #121212;
+  font-size: 13px;
+}
+
+.danger:hover {
+  background: #E8C547;
+  color: #fff;
+}
+.search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search input {
+  flex: 1;
+  max-width: 380px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+a,
+a:visited {
+  color: var(--brand);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--brand);
+}
+
+a:hover::after {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(232, 197, 71, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Delete button turns red on hover */
+button:hover[type="submit"],
+form button:hover {
+  background: #e5484d;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(229, 72, 77, 0.45);
+}
+footer {
+  text-align: left;
+  margin-top: 24px;
+
+}
+
+footer h5 {
+  margin: 6px 0;
+  color: var(--brand);
+  font-family: sans-serif;
+}

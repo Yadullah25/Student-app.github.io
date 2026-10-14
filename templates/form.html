@@ -1,0 +1,50 @@
+<h2>{{ heading }}</h2>
+
+{{ errors }}
+
+<form method="POST" action="{{ action }}" class="student-form">
+
+  <input type="hidden" name="id" value="{{ row_id }}">
+
+  <label class="field">
+    <span>Student ID *</span>
+    <input type="text" name="student_id" value="{{ student_id }}" required>
+  </label>
+
+  <label class="field">
+    <span>Full name *</span>
+    <input type="text" name="full_name" value="{{ full_name }}" required>
+  </label>
+
+  <label class="field">
+    <span>Department *</span>
+    <select name="department" required>
+      <option value="">-- Choose a department --</option>
+      {{ departments }}
+    </select>
+  </label>
+
+  <div class="field">
+    <span>Gender *</span>
+    <div class="radio-row">
+      <label><input type="radio" name="gender" value="Male"{{ male_checked }} required> Male</label>
+      <label><input type="radio" name="gender" value="Female"{{ female_checked }}> Female</label>
+    </div>
+  </div>
+
+  <label class="field">
+    <span>Email</span>
+    <input type="email" name="email" value="{{ email }}">
+  </label>
+
+  <label class="field">
+    <span>Phone</span>
+    <input type="text" name="phone" value="{{ phone }}">
+  </label>
+
+  <div class="form-actions">
+    <button type="submit">{{ submit_label }}</button>
+    <a href="/">Cancel</a>
+  </div>
+
+</form>
